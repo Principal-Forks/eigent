@@ -1,0 +1,174 @@
+version: "1.0.0"
+name: "Eigent Component Library"
+
+nodeComponents:
+  React Frontend:
+    description: "React + TypeScript Electron application with modern UI"
+    tags: ["frontend", "react", "typescript", "electron"]
+    defaultLabel: "React Frontend"
+    shape: "rectangle"
+    icon: "Monitor"
+    color: "#3B82F6"
+    size: { "width": 180, "height": 100 }
+    sources: ["src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
+
+  FastAPI Server:
+    description: "Python FastAPI server handling core business logic"
+    tags: ["backend", "python", "fastapi", "api"]
+    defaultLabel: "FastAPI Server"
+    shape: "rectangle"
+    icon: "Server"
+    color: "#10B981"
+    size: { "width": 160, "height": 100 }
+    sources: ["server/**/*.py"]
+
+  Multi-Agent Backend:
+    description: "Python backend managing AI agents and task execution"
+    tags: ["backend", "python", "agents", "ai"]
+    defaultLabel: "Multi-Agent Backend"
+    shape: "rectangle"
+    icon: "Bot"
+    color: "#8B5CF6"
+    size: { "width": 180, "height": 100 }
+    sources: ["backend/**/*.py"]
+
+  Electron Main Process:
+    description: "Electron main process handling OS interactions"
+    tags: ["system", "electron", "nodejs", "desktop"]
+    defaultLabel: "Electron Main Process"
+    shape: "rectangle"
+    icon: "Cpu"
+    color: "#F59E0B"
+    size: { "width": 180, "height": 100 }
+    sources: ["electron/**/*.ts"]
+
+  State Management:
+    description: "Zustand stores managing application state"
+    tags: ["state", "zustand", "typescript", "frontend"]
+    defaultLabel: "State Management"
+    shape: "rectangle"
+    icon: "Database"
+    color: "#EF4444"
+    size: { "width": 160, "height": 100 }
+    sources: ["src/store/**/*.ts"]
+
+  Database Layer:
+    description: "Database with ORM and migrations"
+    tags: ["database", "postgresql", "sqlalchemy", "backend"]
+    defaultLabel: "Database Layer"
+    shape: "hexagon"
+    icon: "Database"
+    color: "#06B6D4"
+    size: { "width": 160, "height": 100 }
+    sources: ["server/app/models/**/*.py"]
+
+  Authentication System:
+    description: "Stackframe-based authentication with OAuth"
+    tags: ["auth", "security", "oauth", "stackframe"]
+    defaultLabel: "Authentication System"
+    shape: "rectangle"
+    icon: "Lock"
+    color: "#84CC16"
+    size: { "width": 160, "height": 100 }
+    sources: ["src/stack/", "src/store/authStore.ts"]
+
+  Real-time Communication:
+    description: "SSE and WebSocket connections for live updates"
+    tags: ["realtime", "sse", "websocket", "communication"]
+    defaultLabel: "Real-time Communication"
+    shape: "rectangle"
+    icon: "Zap"
+    color: "#F97316"
+    size: { "width": 180, "height": 100 }
+    sources: ["src/lib/llm.ts", "src/components/ChatBox/"]
+
+  File Management System:
+    description: "File operations and document processing"
+    tags: ["files", "system", "io", "processing"]
+    defaultLabel: "File Management System"
+    shape: "rectangle"
+    icon: "File"
+    color: "#A855F7"
+    size: { "width": 180, "height": 100 }
+    sources: ["electron/main/fileReader.ts", "src/lib/"]
+
+  Internationalization:
+    description: "i18n system for multi-language support"
+    tags: ["i18n", "translation", "localization"]
+    defaultLabel: "Internationalization"
+    shape: "rectangle"
+    icon: "Globe"
+    color: "#14B8A6"
+    size: { "width": 160, "height": 100 }
+    sources: ["src/i18n/**/*", "backend/lang/"]
+
+  Testing Framework:
+    description: "Comprehensive testing setup"
+    tags: ["testing", "vitest", "playwright", "pytest"]
+    defaultLabel: "Testing Framework"
+    shape: "rectangle"
+    icon: "CheckCircle"
+    color: "#64748B"
+    size: { "width": 160, "height": 100 }
+    sources: ["test/**/*", "backend/tests/**/*", "server/tests/**/*"]
+
+edgeComponents:
+  HTTP Request:
+    description: "HTTP communication between frontend and backend"
+    color: "#3B82F6"
+    style: "solid"
+    width: 2
+    
+  API Call:
+    description: "API endpoint calls and responses"
+    color: "#10B981"
+    style: "dashed"
+    width: 2
+    
+  Data Flow:
+    description: "Data movement between components"
+    color: "#8B5CF6"
+    style: "solid"
+    width: 2
+    
+  Event Stream:
+    description: "Real-time event streaming"
+    color: "#F97316"
+    style: "wavy"
+    width: 2
+    
+  State Update:
+    description: "State management updates"
+    color: "#EF4444"
+    style: "dotted"
+    width: 2
+    
+  File Operation:
+    description: "File system operations"
+    color: "#A855F7"
+    style: "solid"
+    width: 2
+    
+  Authentication:
+    description: "Authentication and authorization flow"
+    color: "#84CC16"
+    style: "solid"
+    width: 2
+    
+  Database Query:
+    description: "Database operations"
+    color: "#06B6D4"
+    style: "solid"
+    width: 2
+    
+  IPC Communication:
+    description: "Inter-process communication in Electron"
+    color: "#F59E0B"
+    style: "double"
+    width: 2
+    
+  Task Execution:
+    description: "Agent task execution flow"
+    color: "#F97316"
+    style: "solid"
+    width: 2

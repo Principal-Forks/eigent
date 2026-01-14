@@ -1,0 +1,393 @@
+{
+  "nodes": [
+    {
+      "id": "react-frontend",
+      "type": "text",
+      "x": 100,
+      "y": 200,
+      "width": 180,
+      "height": 100,
+      "text": "React Frontend",
+      "pv": {
+        "nodeType": "React Frontend",
+        "shape": "rectangle",
+        "fill": "#3b82f6",
+        "stroke": "#1d4ed8",
+        "icon": "Monitor",
+        "sources": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
+      }
+    },
+    {
+      "id": "electron-main",
+      "type": "text",
+      "x": 100,
+      "y": 50,
+      "width": 180,
+      "height": 100,
+      "text": "Electron Main Process",
+      "pv": {
+        "nodeType": "Electron Main Process",
+        "shape": "rectangle",
+        "fill": "#f59e0b",
+        "stroke": "#d97706",
+        "icon": "Cpu",
+        "sources": ["electron/**/*.ts"]
+      }
+    },
+    {
+      "id": "state-management",
+      "type": "text",
+      "x": 400,
+      "y": 200,
+      "width": 160,
+      "height": 100,
+      "text": "State Management",
+      "pv": {
+        "nodeType": "State Management",
+        "shape": "rectangle",
+        "fill": "#ef4444",
+        "stroke": "#dc2626",
+        "icon": "Database",
+        "sources": ["src/store/**/*.ts"]
+      }
+    },
+    {
+      "id": "auth-system",
+      "type": "text",
+      "x": 400,
+      "y": 350,
+      "width": 160,
+      "height": 100,
+      "text": "Authentication System",
+      "pv": {
+        "nodeType": "Authentication System",
+        "shape": "rectangle",
+        "fill": "#84cc16",
+        "stroke": "#65a30d",
+        "icon": "Lock",
+        "sources": ["src/stack/", "src/store/authStore.ts"]
+      }
+    },
+    {
+      "id": "fastapi-server",
+      "type": "text",
+      "x": 700,
+      "y": 200,
+      "width": 160,
+      "height": 100,
+      "text": "FastAPI Server",
+      "pv": {
+        "nodeType": "FastAPI Server",
+        "shape": "rectangle",
+        "fill": "#10b981",
+        "stroke": "#059669",
+        "icon": "Server",
+        "sources": ["server/**/*.py"]
+      }
+    },
+    {
+      "id": "database",
+      "type": "text",
+      "x": 1000,
+      "y": 200,
+      "width": 160,
+      "height": 100,
+      "text": "Database Layer",
+      "pv": {
+        "nodeType": "Database Layer",
+        "shape": "hexagon",
+        "fill": "#06b6d4",
+        "stroke": "#0891b2",
+        "icon": "Database",
+        "sources": ["server/app/models/**/*.py"]
+      }
+    },
+    {
+      "id": "agent-backend",
+      "type": "text",
+      "x": 700,
+      "y": 350,
+      "width": 180,
+      "height": 100,
+      "text": "Multi-Agent Backend",
+      "pv": {
+        "nodeType": "Multi-Agent Backend",
+        "shape": "rectangle",
+        "fill": "#8b5cf6",
+        "stroke": "#6d28d9",
+        "icon": "Bot",
+        "sources": ["backend/**/*.py"]
+      }
+    },
+    {
+      "id": "realtime-comm",
+      "type": "text",
+      "x": 700,
+      "y": 50,
+      "width": 180,
+      "height": 100,
+      "text": "Real-time Communication",
+      "pv": {
+        "nodeType": "Real-time Communication",
+        "shape": "rectangle",
+        "fill": "#f97316",
+        "stroke": "#ea580c",
+        "icon": "Zap",
+        "sources": ["src/lib/llm.ts", "src/components/ChatBox/"]
+      }
+    },
+    {
+      "id": "file-management",
+      "type": "text",
+      "x": 100,
+      "y": 350,
+      "width": 180,
+      "height": 100,
+      "text": "File Management System",
+      "pv": {
+        "nodeType": "File Management System",
+        "shape": "rectangle",
+        "fill": "#a855f7",
+        "stroke": "#7c3aed",
+        "icon": "File",
+        "sources": ["electron/main/fileReader.ts", "src/lib/"]
+      }
+    },
+    {
+      "id": "i18n",
+      "type": "text",
+      "x": 400,
+      "y": 50,
+      "width": 160,
+      "height": 100,
+      "text": "Internationalization",
+      "pv": {
+        "nodeType": "Internationalization",
+        "shape": "rectangle",
+        "fill": "#14b8a6",
+        "stroke": "#0d9488",
+        "icon": "Globe",
+        "sources": ["src/i18n/**/*", "backend/lang/"]
+      }
+    },
+    {
+      "id": "testing",
+      "type": "text",
+      "x": 400,
+      "y": 500,
+      "width": 160,
+      "height": 100,
+      "text": "Testing Framework",
+      "pv": {
+        "nodeType": "Testing Framework",
+        "shape": "rectangle",
+        "fill": "#64748b",
+        "stroke": "#475569",
+        "icon": "CheckCircle",
+        "sources": ["test/**/*", "backend/tests/**/*", "server/tests/**/*"]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "react-frontend",
+      "toNode": "electron-main",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": { "edgeType": "IPC Communication" }
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "react-frontend",
+      "toNode": "state-management",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": { "edgeType": "State Update" }
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "react-frontend",
+      "toNode": "auth-system",
+      "fromSide": "right",
+      "toSide": "top",
+      "pv": { "edgeType": "Authentication" }
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "react-frontend",
+      "toNode": "fastapi-server",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": { "edgeType": "HTTP Request" }
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "react-frontend",
+      "toNode": "realtime-comm",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "pv": { "edgeType": "Event Stream" }
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "react-frontend",
+      "toNode": "file-management",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": { "edgeType": "File Operation" }
+    },
+    {
+      "id": "edge-7",
+      "fromNode": "react-frontend",
+      "toNode": "i18n",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": { "edgeType": "Data Flow" }
+    },
+    {
+      "id": "edge-8",
+      "fromNode": "electron-main",
+      "toNode": "file-management",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": { "edgeType": "File Operation" }
+    },
+    {
+      "id": "edge-9",
+      "fromNode": "state-management",
+      "toNode": "auth-system",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": { "edgeType": "State Update" }
+    },
+    {
+      "id": "edge-10",
+      "fromNode": "fastapi-server",
+      "toNode": "database",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": { "edgeType": "Database Query" }
+    },
+    {
+      "id": "edge-11",
+      "fromNode": "fastapi-server",
+      "toNode": "agent-backend",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": { "edgeType": "Task Execution" }
+    },
+    {
+      "id": "edge-12",
+      "fromNode": "fastapi-server",
+      "toNode": "realtime-comm",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": { "edgeType": "Event Stream" }
+    },
+    {
+      "id": "edge-13",
+      "fromNode": "auth-system",
+      "toNode": "fastapi-server",
+      "fromSide": "right",
+      "toSide": "top",
+      "pv": { "edgeType": "Authentication" }
+    },
+    {
+      "id": "edge-14",
+      "fromNode": "agent-backend",
+      "toNode": "realtime-comm",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "pv": { "edgeType": "Event Stream" }
+    },
+    {
+      "id": "edge-15",
+      "fromNode": "testing",
+      "toNode": "react-frontend",
+      "fromSide": "top",
+      "toSide": "left",
+      "pv": { "edgeType": "Data Flow" }
+    },
+    {
+      "id": "edge-16",
+      "fromNode": "testing",
+      "toNode": "fastapi-server",
+      "fromSide": "top",
+      "toSide": "left",
+      "pv": { "edgeType": "Data Flow" }
+    },
+    {
+      "id": "edge-17",
+      "fromNode": "testing",
+      "toNode": "agent-backend",
+      "fromSide": "top",
+      "toSide": "right",
+      "pv": { "edgeType": "Data Flow" }
+    }
+  ],
+  "pv": {
+    "name": "Eigent Multi-Agent Architecture",
+    "version": "1.0.0",
+    "edgeTypes": {
+      "HTTP Request": {
+        "style": "solid",
+        "color": "#3b82f6",
+        "width": 2,
+        "animation": {
+          "type": "flow",
+          "duration": 1500
+        }
+      },
+      "API Call": {
+        "style": "dashed",
+        "color": "#10b981",
+        "width": 2
+      },
+      "Data Flow": {
+        "style": "solid",
+        "color": "#8b5cf6",
+        "width": 2
+      },
+      "Event Stream": {
+        "style": "wavy",
+        "color": "#f97316",
+        "width": 2,
+        "animation": {
+          "type": "flow",
+          "duration": 1000
+        }
+      },
+      "State Update": {
+        "style": "dotted",
+        "color": "#ef4444",
+        "width": 2
+      },
+      "File Operation": {
+        "style": "solid",
+        "color": "#a855f7",
+        "width": 2
+      },
+      "Authentication": {
+        "style": "solid",
+        "color": "#84cc16",
+        "width": 2
+      },
+      "Database Query": {
+        "style": "solid",
+        "color": "#06b6d4",
+        "width": 2
+      },
+      "IPC Communication": {
+        "style": "double",
+        "color": "#f59e0b",
+        "width": 2
+      },
+      "Task Execution": {
+        "style": "solid",
+        "color": "#f97316",
+        "width": 2
+      }
+    }
+  }
+}

@@ -26,7 +26,8 @@
     "test:watch": "vitest",
     "test:e2e": "vitest run --config vitest.config.ts",
     "test:coverage": "vitest run --coverage",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@electron/notarize": "^2.5.0",
@@ -113,6 +114,7 @@
     "electron": "^33.2.0",
     "electron-builder": "^24.13.3",
     "electron-devtools-installer": "^4.0.0",
+    "husky": "^9.1.7",
     "i18next": "^25.4.2",
     "jsdom": "^26.1.0",
     "postcss": "^8.4.49",
