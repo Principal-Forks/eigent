@@ -3,8 +3,8 @@
     {
       "id": "react-frontend",
       "type": "text",
-      "x": 100,
-      "y": 200,
+      "x": 57,
+      "y": 192,
       "width": 180,
       "height": 100,
       "text": "React Frontend",
@@ -14,14 +14,18 @@
         "fill": "#3b82f6",
         "stroke": "#1d4ed8",
         "icon": "Monitor",
-        "sources": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
+        "sources": [
+          "src/**/*.tsx",
+          "src/**/*.ts",
+          "src/**/*.css"
+        ]
       }
     },
     {
       "id": "electron-main",
       "type": "text",
-      "x": 100,
-      "y": 50,
+      "x": 57,
+      "y": 53,
       "width": 180,
       "height": 100,
       "text": "Electron Main Process",
@@ -31,14 +35,16 @@
         "fill": "#f59e0b",
         "stroke": "#d97706",
         "icon": "Cpu",
-        "sources": ["electron/**/*.ts"]
+        "sources": [
+          "electron/**/*.ts"
+        ]
       }
     },
     {
       "id": "state-management",
       "type": "text",
-      "x": 400,
-      "y": 200,
+      "x": 460,
+      "y": 199,
       "width": 160,
       "height": 100,
       "text": "State Management",
@@ -48,14 +54,16 @@
         "fill": "#ef4444",
         "stroke": "#dc2626",
         "icon": "Database",
-        "sources": ["src/store/**/*.ts"]
+        "sources": [
+          "src/store/**/*.ts"
+        ]
       }
     },
     {
       "id": "auth-system",
       "type": "text",
-      "x": 400,
-      "y": 350,
+      "x": 356,
+      "y": 324,
       "width": 160,
       "height": 100,
       "text": "Authentication System",
@@ -65,14 +73,17 @@
         "fill": "#84cc16",
         "stroke": "#65a30d",
         "icon": "Lock",
-        "sources": ["src/stack/", "src/store/authStore.ts"]
+        "sources": [
+          "src/stack/",
+          "src/store/authStore.ts"
+        ]
       }
     },
     {
       "id": "fastapi-server",
       "type": "text",
-      "x": 700,
-      "y": 200,
+      "x": 765,
+      "y": 220,
       "width": 160,
       "height": 100,
       "text": "FastAPI Server",
@@ -82,14 +93,16 @@
         "fill": "#10b981",
         "stroke": "#059669",
         "icon": "Server",
-        "sources": ["server/**/*.py"]
+        "sources": [
+          "server/**/*.py"
+        ]
       }
     },
     {
       "id": "database",
       "type": "text",
-      "x": 1000,
-      "y": 200,
+      "x": 1005,
+      "y": 220,
       "width": 160,
       "height": 100,
       "text": "Database Layer",
@@ -99,14 +112,16 @@
         "fill": "#06b6d4",
         "stroke": "#0891b2",
         "icon": "Database",
-        "sources": ["server/app/models/**/*.py"]
+        "sources": [
+          "server/app/models/**/*.py"
+        ]
       }
     },
     {
       "id": "agent-backend",
       "type": "text",
-      "x": 700,
-      "y": 350,
+      "x": 758,
+      "y": 410,
       "width": 180,
       "height": 100,
       "text": "Multi-Agent Backend",
@@ -116,13 +131,15 @@
         "fill": "#8b5cf6",
         "stroke": "#6d28d9",
         "icon": "Bot",
-        "sources": ["backend/**/*.py"]
+        "sources": [
+          "backend/**/*.py"
+        ]
       }
     },
     {
       "id": "realtime-comm",
       "type": "text",
-      "x": 700,
+      "x": 756,
       "y": 50,
       "width": 180,
       "height": 100,
@@ -133,14 +150,17 @@
         "fill": "#f97316",
         "stroke": "#ea580c",
         "icon": "Zap",
-        "sources": ["src/lib/llm.ts", "src/components/ChatBox/"]
+        "sources": [
+          "src/lib/llm.ts",
+          "src/components/ChatBox/"
+        ]
       }
     },
     {
       "id": "file-management",
       "type": "text",
-      "x": 100,
-      "y": 350,
+      "x": 45,
+      "y": 385,
       "width": 180,
       "height": 100,
       "text": "File Management System",
@@ -150,14 +170,17 @@
         "fill": "#a855f7",
         "stroke": "#7c3aed",
         "icon": "File",
-        "sources": ["electron/main/fileReader.ts", "src/lib/"]
+        "sources": [
+          "electron/main/fileReader.ts",
+          "src/lib/"
+        ]
       }
     },
     {
       "id": "i18n",
       "type": "text",
-      "x": 400,
-      "y": 50,
+      "x": 362,
+      "y": 48,
       "width": 160,
       "height": 100,
       "text": "Internationalization",
@@ -167,14 +190,17 @@
         "fill": "#14b8a6",
         "stroke": "#0d9488",
         "icon": "Globe",
-        "sources": ["src/i18n/**/*", "backend/lang/"]
+        "sources": [
+          "src/i18n/**/*",
+          "backend/lang/"
+        ]
       }
     },
     {
       "id": "testing",
       "type": "text",
-      "x": 400,
-      "y": 500,
+      "x": 397,
+      "y": 543,
       "width": 160,
       "height": 100,
       "text": "Testing Framework",
@@ -184,26 +210,24 @@
         "fill": "#64748b",
         "stroke": "#475569",
         "icon": "CheckCircle",
-        "sources": ["test/**/*", "backend/tests/**/*", "server/tests/**/*"]
+        "sources": [
+          "test/**/*",
+          "backend/tests/**/*",
+          "server/tests/**/*"
+        ]
       }
     }
   ],
   "edges": [
-    {
-      "id": "edge-1",
-      "fromNode": "react-frontend",
-      "toNode": "electron-main",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "pv": { "edgeType": "IPC Communication" }
-    },
     {
       "id": "edge-2",
       "fromNode": "react-frontend",
       "toNode": "state-management",
       "fromSide": "right",
       "toSide": "left",
-      "pv": { "edgeType": "State Update" }
+      "pv": {
+        "edgeType": "State Update"
+      }
     },
     {
       "id": "edge-3",
@@ -211,23 +235,9 @@
       "toNode": "auth-system",
       "fromSide": "right",
       "toSide": "top",
-      "pv": { "edgeType": "Authentication" }
-    },
-    {
-      "id": "edge-4",
-      "fromNode": "react-frontend",
-      "toNode": "fastapi-server",
-      "fromSide": "right",
-      "toSide": "left",
-      "pv": { "edgeType": "HTTP Request" }
-    },
-    {
-      "id": "edge-5",
-      "fromNode": "react-frontend",
-      "toNode": "realtime-comm",
-      "fromSide": "right",
-      "toSide": "bottom",
-      "pv": { "edgeType": "Event Stream" }
+      "pv": {
+        "edgeType": "Authentication"
+      }
     },
     {
       "id": "edge-6",
@@ -235,23 +245,9 @@
       "toNode": "file-management",
       "fromSide": "bottom",
       "toSide": "top",
-      "pv": { "edgeType": "File Operation" }
-    },
-    {
-      "id": "edge-7",
-      "fromNode": "react-frontend",
-      "toNode": "i18n",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "pv": { "edgeType": "Data Flow" }
-    },
-    {
-      "id": "edge-8",
-      "fromNode": "electron-main",
-      "toNode": "file-management",
-      "fromSide": "right",
-      "toSide": "left",
-      "pv": { "edgeType": "File Operation" }
+      "pv": {
+        "edgeType": "File Operation"
+      }
     },
     {
       "id": "edge-9",
@@ -259,7 +255,9 @@
       "toNode": "auth-system",
       "fromSide": "bottom",
       "toSide": "top",
-      "pv": { "edgeType": "State Update" }
+      "pv": {
+        "edgeType": "State Update"
+      }
     },
     {
       "id": "edge-10",
@@ -267,7 +265,9 @@
       "toNode": "database",
       "fromSide": "right",
       "toSide": "left",
-      "pv": { "edgeType": "Database Query" }
+      "pv": {
+        "edgeType": "Database Query"
+      }
     },
     {
       "id": "edge-11",
@@ -275,55 +275,119 @@
       "toNode": "agent-backend",
       "fromSide": "bottom",
       "toSide": "top",
-      "pv": { "edgeType": "Task Execution" }
+      "pv": {
+        "edgeType": "Task Execution"
+      }
     },
     {
-      "id": "edge-12",
+      "id": "edge-electron-main-file-management-1768513698545",
+      "fromNode": "electron-main",
+      "toNode": "file-management",
+      "fromSide": "left",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "File Operation"
+      }
+    },
+    {
+      "id": "edge-react-frontend-electron-main-1768513698546",
+      "fromNode": "react-frontend",
+      "toNode": "electron-main",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "IPC Communication"
+      }
+    },
+    {
+      "id": "edge-react-frontend-i18n-1768513698546",
+      "fromNode": "react-frontend",
+      "toNode": "i18n",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "Data Flow"
+      }
+    },
+    {
+      "id": "edge-testing-react-frontend-1768513698546",
+      "fromNode": "testing",
+      "toNode": "react-frontend",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "Data Flow"
+      }
+    },
+    {
+      "id": "edge-testing-agent-backend-1768513698546",
+      "fromNode": "testing",
+      "toNode": "agent-backend",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "Data Flow"
+      }
+    },
+    {
+      "id": "edge-agent-backend-realtime-comm-1768513698546",
+      "fromNode": "agent-backend",
+      "toNode": "realtime-comm",
+      "fromSide": "right",
+      "toSide": "right",
+      "pv": {
+        "edgeType": "Event Stream"
+      }
+    },
+    {
+      "id": "edge-auth-system-fastapi-server-1768513698546",
+      "fromNode": "auth-system",
+      "toNode": "fastapi-server",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "Authentication"
+      }
+    },
+    {
+      "id": "edge-testing-fastapi-server-1768513698546",
+      "fromNode": "testing",
+      "toNode": "fastapi-server",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "pv": {
+        "edgeType": "Data Flow"
+      }
+    },
+    {
+      "id": "edge-react-frontend-realtime-comm-1768513698546",
+      "fromNode": "react-frontend",
+      "toNode": "realtime-comm",
+      "fromSide": "right",
+      "toSide": "left",
+      "pv": {
+        "edgeType": "Event Stream"
+      }
+    },
+    {
+      "id": "edge-fastapi-server-realtime-comm-1768513698546",
       "fromNode": "fastapi-server",
       "toNode": "realtime-comm",
       "fromSide": "top",
       "toSide": "bottom",
-      "pv": { "edgeType": "Event Stream" }
+      "pv": {
+        "edgeType": "Event Stream"
+      }
     },
     {
-      "id": "edge-13",
-      "fromNode": "auth-system",
+      "id": "edge-react-frontend-fastapi-server-1768513698546",
+      "fromNode": "react-frontend",
       "toNode": "fastapi-server",
-      "fromSide": "right",
+      "fromSide": "top",
       "toSide": "top",
-      "pv": { "edgeType": "Authentication" }
-    },
-    {
-      "id": "edge-14",
-      "fromNode": "agent-backend",
-      "toNode": "realtime-comm",
-      "fromSide": "right",
-      "toSide": "bottom",
-      "pv": { "edgeType": "Event Stream" }
-    },
-    {
-      "id": "edge-15",
-      "fromNode": "testing",
-      "toNode": "react-frontend",
-      "fromSide": "top",
-      "toSide": "left",
-      "pv": { "edgeType": "Data Flow" }
-    },
-    {
-      "id": "edge-16",
-      "fromNode": "testing",
-      "toNode": "fastapi-server",
-      "fromSide": "top",
-      "toSide": "left",
-      "pv": { "edgeType": "Data Flow" }
-    },
-    {
-      "id": "edge-17",
-      "fromNode": "testing",
-      "toNode": "agent-backend",
-      "fromSide": "top",
-      "toSide": "right",
-      "pv": { "edgeType": "Data Flow" }
+      "pv": {
+        "edgeType": "HTTP Request"
+      }
     }
   ],
   "pv": {
