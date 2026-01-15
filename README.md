@@ -386,3 +386,4 @@ For more information please contact info@eigent.ai
 [image-customise-workers]: https://eigent-ai.github.io/.github/assets/feature_customise_workers.gif
 [image-add-mcps]: https://eigent-ai.github.io/.github/assets/feature_add_mcps.gif
 [image-local-model]: https://eigent-ai.github.io/.github/assets/feature_local_model.gif
+# Updated with quality lens integration
