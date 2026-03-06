@@ -125,7 +125,7 @@
     {
       "id": "state-management",
       "title": "State Management",
-      "description": "Zustand stores manage all frontend state. Key stores include chatStore (conversations), projectStore (workspace projects), authStore (authentication), and triggerStore/triggerTaskStore (workflow triggers). Each store is a single file for simplicity.",
+      "description": "Zustand stores manage all frontend state. Key stores include chatStore (conversations), projectStore (workspace projects), authStore (authentication), and triggerStore (workflow triggers). Each store is a single file for simplicity.",
       "focusDirectory": "src/store",
       "colorMode": "fileTypes",
       "highlightLayers": [
