@@ -1,0 +1,263 @@
+{
+  "id": "eigent-intro",
+  "title": "Eigent Codebase Tour",
+  "description": "A guided walkthrough of Eigent's open-source Cowork desktop application — covering the Electron shell, React frontend, FastAPI backend, and multi-agent system.",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "overview",
+      "title": "Welcome to Eigent",
+      "description": "Eigent is an open-source Cowork desktop app that lets you build, manage, and deploy a custom AI workforce. The codebase has three main layers: an Electron shell, a React/TypeScript frontend, and a FastAPI/Python backend with multi-agent orchestration powered by CAMEL-AI.",
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "electron-shell",
+      "title": "Electron Shell",
+      "description": "The Electron layer wraps the React app as a native desktop application. The main process handles window management, IPC, auto-updates, and system integration. The preload scripts expose safe APIs to the renderer process.",
+      "focusDirectory": "electron",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "electron-main",
+          "name": "Main Process",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "electron/main", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "electron-preload",
+          "name": "Preload Scripts",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "electron/preload", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "frontend-core",
+      "title": "Frontend Application",
+      "description": "The React frontend lives in src/. Pages define the main views (Home, Agents, Projects, Settings, etc.), components provide reusable UI, and Zustand stores manage state. Routing, API services, and i18n are also organized here.",
+      "focusDirectory": "src",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "pages",
+          "name": "Pages",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "src/pages", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "components",
+          "name": "Components",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "src/components", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "state",
+          "name": "State Management",
+          "color": "#10b981",
+          "items": [
+            { "path": "src/store", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "ui-components",
+      "title": "UI Components & Workspace",
+      "description": "Key UI areas include ChatBox for conversation, the Workforce layout (SideBar, TopBar, BottomBar), terminal and browser agent workspaces, and the dialog system. The ui/ directory contains shared primitives built on Radix UI.",
+      "focusDirectory": "src/components",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "chat",
+          "name": "Chat Interface",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "src/components/ChatBox", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "workspaces",
+          "name": "Agent Workspaces",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "src/components/Terminal", "type": "directory" },
+            { "path": "src/components/TerminalAgentWorkspace", "type": "directory" },
+            { "path": "src/components/BrowserAgentWorkspace", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "layout",
+          "name": "Layout & Navigation",
+          "color": "#10b981",
+          "items": [
+            { "path": "src/components/Layout", "type": "directory" },
+            { "path": "src/components/SideBar", "type": "directory" },
+            { "path": "src/components/TopBar", "type": "directory" },
+            { "path": "src/components/BottomBar", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "state-management",
+      "title": "State Management",
+      "description": "Zustand stores manage all frontend state. Key stores include chatStore (conversations), projectStore (workspace projects), authStore (authentication), and triggerStore/triggerTaskStore (workflow triggers). Each store is a single file for simplicity.",
+      "focusDirectory": "src/store",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "core-stores",
+          "name": "Core Stores",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "src/store/chatStore.ts", "type": "file" },
+            { "path": "src/store/projectStore.ts", "type": "file" },
+            { "path": "src/store/authStore.ts", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "workflow-stores",
+          "name": "Workflow & Triggers",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "src/store/triggerStore.ts", "type": "file" },
+            { "path": "src/store/triggerTaskStore.ts", "type": "file" },
+            { "path": "src/store/skillsStore.ts", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "backend-server",
+      "title": "Backend Server",
+      "description": "The self-hosted backend (server/) is a FastAPI application with Alembic migrations, Celery task queues, and Docker support. It provides the full API for local deployment, handling authentication, agent orchestration, and MCP tool integration.",
+      "focusDirectory": "server",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "server-app",
+          "name": "Application Core",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "server/app", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "server-infra",
+          "name": "Infrastructure",
+          "color": "#ef4444",
+          "items": [
+            { "path": "server/alembic", "type": "directory" },
+            { "path": "server/celery", "type": "directory" },
+            { "path": "server/Dockerfile", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "multi-agent-system",
+      "title": "Multi-Agent System",
+      "description": "The heart of Eigent — the agent system built on CAMEL-AI. The agent factory creates specialized workers (Developer, Browser, Document, Multi-Modal). Each agent has toolkits for its domain, and the listen_chat_agent handles real-time conversation streaming.",
+      "focusDirectory": "server/app/agent",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "agent-core",
+          "name": "Agent Core",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "server/app/agent/agent_model.py", "type": "file" },
+            { "path": "server/app/agent/listen_chat_agent.py", "type": "file" },
+            { "path": "server/app/agent/factory", "type": "directory" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "agent-tools",
+          "name": "Toolkits & Tools",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "server/app/agent/toolkit", "type": "directory" },
+            { "path": "server/app/agent/tools.py", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "title": "Configuration & Build",
+      "description": "Project configuration includes Vite for bundling, Electron Builder for desktop packaging, TypeScript configs, Tailwind CSS, ESLint/Prettier for code quality, and Husky for git hooks. The scripts/ directory contains build helpers.",
+      "focusDirectory": "",
+      "colorMode": "fileTypes",
+      "highlightLayers": [
+        {
+          "id": "build-config",
+          "name": "Build & Bundle",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "vite.config.ts", "type": "file" },
+            { "path": "electron-builder.json", "type": "file" },
+            { "path": "tsconfig.json", "type": "file" },
+            { "path": "tsconfig.build.json", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        },
+        {
+          "id": "quality-config",
+          "name": "Code Quality",
+          "color": "#10b981",
+          "items": [
+            { "path": "eslint.config.js", "type": "file" },
+            { "path": "tailwind.config.js", "type": "file" },
+            { "path": "postcss.config.cjs", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ]
+    },
+    {
+      "id": "full-picture",
+      "title": "The Full Picture",
+      "description": "Eigent brings together Electron + React + FastAPI + CAMEL-AI into a cohesive multi-agent desktop application. The frontend handles UI and state, the backend orchestrates AI agents with specialized toolkits, and the Electron shell delivers it as a native app. Explore each area to dive deeper!",
+      "focusDirectory": "",
+      "colorMode": "fileTypes"
+    }
+  ]
+}
